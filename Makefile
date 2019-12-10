@@ -57,7 +57,7 @@ install.static: $(GO_SRC)
 
 install.plugin: mirror
 	mkdir -p $(HELM_HOME_MIRROR_BIN)
-	cp bin/mirror $(HELM_HOME_MIRROR_BIN)
+	cp bin/helm-mirror $(HELM_HOME_MIRROR_BIN)
 	cp plugin.yaml $(HELM_HOME_MIRROR)/
 
 clean:

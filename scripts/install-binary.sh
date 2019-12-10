@@ -123,7 +123,7 @@ fail_trap() {
 testVersion() {
   set +e
   echo "$PROJECT_NAME installed into $HELM_PLUGIN_DIR"
-  $HELM_PLUGIN_DIR/bin/mirror version
+  $HELM_PLUGIN_DIR/bin/helm-mirror version
   set -e
 }
 
