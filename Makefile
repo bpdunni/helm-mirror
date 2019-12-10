@@ -44,10 +44,10 @@ GO_SRC = $(shell find . -name \*.go)
 # NOTE: If you change these make sure you also update local-validate-build.
 
 mirror: $(GO_SRC)
-	$(GO) build ${DYN_BUILD_FLAGS} -o $(BUILD_DIR)/mirror ${CMD}
+	$(GO) build ${DYN_BUILD_FLAGS} -o $(BUILD_DIR)/helm-mirror ${CMD}
 
 mirror.static: $(GO_SRC)
-	env CGO_ENABLED=0 $(GO) build ${STATIC_BUILD_FLAGS} -o $(BUILD_DIR)/mirror ${CMD}
+	env CGO_ENABLED=0 $(GO) build ${STATIC_BUILD_FLAGS} -o $(BUILD_DIR)/helm-mirror ${CMD}
 
 install: $(GO_SRC)
 	$(GO) install -v ${DYN_BUILD_FLAGS} ${CMD}
